@@ -137,6 +137,7 @@ $(window).on('load', function() {
 
         markerArray.push(marker);
       }
+      console.log(myradius);
     }
 
     var group = L.featureGroup(markerArray);

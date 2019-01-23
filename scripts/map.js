@@ -125,7 +125,8 @@ $(window).on('load', function() {
         );
 
       if (point.Latitude !== '' && point.Longitude !== '') {
-        var marker = L.circleMarker([point.Latitude, point.Longitude], {radius:50})
+        var myradius=(point.Quality);
+        var marker = L.circleMarker([point.Latitude, point.Longitude], {radius:myradius})
           .bindPopup("<b>" + point['Name'] + '</b><br>' +
           (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : '') +
           point['Description']);
